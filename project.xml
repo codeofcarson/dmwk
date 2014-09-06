@@ -4,6 +4,7 @@
     <app main="Main" path="Export" file="Dmwk" />
     <source path="Source" />
     <haxelib name="openfl" />
+    <haxelib name="ash" />
     <assets path="Assets" rename="assets" exclude="openfl.svg" />
     <icon path="Assets/openfl.svg" />
 </project>

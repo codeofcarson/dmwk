@@ -2,7 +2,11 @@
 
 ### Haxe ###
 
+# Binaries
 /Export/
+
+# Vaxe build file
+project.xml.hxml
 
 ### Linux ###
 *~
