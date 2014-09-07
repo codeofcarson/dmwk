@@ -61,7 +61,7 @@ class DontMessWithKitty
         _engine.addSystem(new SRender(_container), SystemPriorities.render);
 
         // Quick demo showing physics
-        var img = new Bitmap(Assets.getBitmapData("assets/Images/mechwarrior.png"));
+        var img = new Bitmap(Assets.getBitmapData("assets/img/mechwarrior.png"));
         var e = new Entity();
         var b = new CBody();
         b.body.mass = 1;
