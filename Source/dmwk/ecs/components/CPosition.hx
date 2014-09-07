@@ -18,6 +18,14 @@ package dmwk.ecs.components;
 
 class CPosition
 {
-    public var worldX : Int;
-    public var worldY : Int;
+    public var worldX : Float;
+    public var worldY : Float;
+    public var rotation : Float;
+
+    public function new()
+    {
+        worldX = 0;
+        worldY = 0;
+        rotation = 0;
+    }
 }

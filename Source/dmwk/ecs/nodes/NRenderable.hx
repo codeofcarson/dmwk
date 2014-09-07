@@ -17,19 +17,19 @@
 package dmwk.ecs.nodes;
 
 import ash.core.Node;
-import nape.phys.Body;
-import dmwk.ecs.components.CBody;
+import flash.display.DisplayObject;
 import dmwk.ecs.components.CPosition;
+import dmwk.ecs.components.CDisplay;
 
-class NPhysical extends Node<NPhysical>
+class NRenderable extends Node<NRenderable>
 {
     public var position : CPosition;
-    private var _body : CBody;
+    private var _display : CDisplay;
 
-    public var body(get, never) : Body;
+    public var displayObject(get, never) : DisplayObject;
 
-    private inline function get_body() : Body
+    private inline function get_displayObject() : DisplayObject
     {
-        return _body.body;
+        return _display.displayObject;
     }
 }

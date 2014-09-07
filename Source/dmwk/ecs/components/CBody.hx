@@ -17,8 +17,16 @@
 package dmwk.ecs.components;
 
 import nape.phys.Body;
+import nape.phys.BodyType;
+import nape.geom.Vec2;
 
 class CBody
 {
-    public var body : Body;
+    public var body(default, null) : Body;
+
+    public function new(type : BodyType = null,
+                        position : Vec2 = null)
+    {
+        body = new Body(type, position);
+    }
 }

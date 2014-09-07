@@ -14,22 +14,13 @@
  * You should have received a copy of the GNU General Public License along
  * with Don't Mess with Kitty.  If not, see <http://www.gnu.org/licenses/>.
  */
-package dmwk.ecs.nodes;
+package dmwk.ecs.systems;
 
-import ash.core.Node;
-import nape.phys.Body;
-import dmwk.ecs.components.CBody;
-import dmwk.ecs.components.CPosition;
-
-class NPhysical extends Node<NPhysical>
+class SystemPriorities
 {
-    public var position : CPosition;
-    private var _body : CBody;
-
-    public var body(get, never) : Body;
-
-    private inline function get_body() : Body
-    {
-        return _body.body;
-    }
+    public static inline var preUpdate : Int = 1;
+    public static inline var update : Int = 2;
+    public static inline var move : Int = 3;
+    public static inline var physics : Int = 4;
+    public static inline var render : Int = 5;
 }

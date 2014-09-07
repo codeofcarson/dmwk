@@ -19,11 +19,9 @@ package dmwk.ecs.nodes;
 import ash.core.Node;
 import nape.phys.Body;
 import dmwk.ecs.components.CBody;
-import dmwk.ecs.components.CPosition;
 
-class NPhysical extends Node<NPhysical>
+class NBody extends Node<NBody>
 {
-    public var position : CPosition;
     private var _body : CBody;
 
     public var body(get, never) : Body;

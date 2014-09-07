@@ -14,8 +14,16 @@
  * You should have received a copy of the GNU General Public License along
  * with Don't Mess with Kitty.  If not, see <http://www.gnu.org/licenses/>.
  */
-package dmwk.ecs.systems;
+package dmwk.ecs.components;
 
-class SPhysical
+import flash.display.DisplayObject;
+
+class CDisplay
 {
+    public var displayObject(default, null) : DisplayObject;
+
+    public function new(displayObject : DisplayObject)
+    {
+        this.displayObject = displayObject;
+    }
 }
