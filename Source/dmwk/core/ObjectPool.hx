@@ -27,7 +27,7 @@ interface IObjectFactory<T>
     function create() : T;
 }
 
-class ObjectPool<T : IPooled>
+class ObjectPool<T>
 {
     // TODO: Do we need to make this thread-safe?
 
@@ -50,7 +50,10 @@ class ObjectPool<T : IPooled>
         }
 
         _live -= 1;
-        obj.deactivate();
+        if (Std.is(obj, IPooled))
+        {
+            cast(obj, IPooled).deactivate();
+        }
         _available.push(obj);
 
         cleanup();
@@ -80,7 +83,10 @@ class ObjectPool<T : IPooled>
             newObject = value;
         }
 
-        newObject.activate();
+        if (Std.is(newObject, IPooled))
+        {
+            cast(newObject, IPooled).activate();
+        }
         _live += 1;
         return newObject;
     }
